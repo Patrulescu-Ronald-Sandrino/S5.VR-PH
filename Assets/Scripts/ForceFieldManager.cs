@@ -35,19 +35,11 @@ public class ForceFieldManager : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        var gameObjectName = collision.gameObject.name;
-        if (gameObjectName is "CannonBall(Clone)" or "Brick(Clone)")
-        {
-            _hp--;
-            _UpdateForceFieldText();
-        }
-        {
-            _hp--;
+        _hp--;
             
-            // lower the alpha value of the force field
-            _UpdateForceFieldText();
-            UpdateAlpha();
-        }
+        // lower the alpha value of the force field
+        UpdateAlpha();
+        _UpdateForceFieldText();
     }
 
     

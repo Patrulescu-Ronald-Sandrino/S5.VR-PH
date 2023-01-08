@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class CannonManager2 : MonoBehaviour
 {
     public float rotationSpeed = 1;
+    public float fireForceConstant = 50.0f;
 
     public GameObject cannonBallPrefab;
     public Transform firePoint;
@@ -53,7 +54,7 @@ public class CannonManager2 : MonoBehaviour
     private void _Fire()
     {
         var cannonBallRigidbody = Instantiate(cannonBallPrefab, firePoint.position, firePoint.rotation).GetComponent<Rigidbody>();
-        var fireForce = firePoint.forward * (slider.value * 100.0f);
+        var fireForce = firePoint.forward * (slider.value * fireForceConstant);
         
         // cannonBallRigidbody.velocity = fireForce;
         /* or */

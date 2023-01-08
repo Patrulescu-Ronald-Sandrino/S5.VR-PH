@@ -1694,6 +1694,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitChance: 1
+  fireForce: 100
+  isFireForceSameAsTarget: 1
+  time: 1
   cannonBallPrefab: {fileID: 4175902096746061247, guid: b61fd2d134d86355e90a94accfe4e9cc, type: 3}
   cannonBallDefensePrefab: {fileID: 3398470380280565523, guid: b0ebebb6d85cdda37a8b06a795718741, type: 3}
   cannon: {fileID: 1152167174}

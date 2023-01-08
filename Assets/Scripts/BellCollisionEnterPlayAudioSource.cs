@@ -7,7 +7,7 @@ public class BellCollisionEnterPlayAudioSource : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         var gameObjectName = collision.gameObject.name;
-        if (gameObjectName is "CannonBall(Clone)" or "Brick(Clone)" or "ClapperEnd")
+        // if (gameObjectName is "CannonBall(Clone)" or "Brick(Clone)" or "ClapperEnd")
         {
             audioSource.Play();
         }

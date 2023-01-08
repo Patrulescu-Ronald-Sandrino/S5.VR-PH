@@ -16,14 +16,14 @@ public class CannonManager : MonoBehaviour
     private bool _pressingMouse = false;
 
     private Vector3 _initialVelocity;
-    private Vector3 _lookAt = new(0, 0, 1);
+    private Vector3 _lookAt = new(0, 7, 0);
 
     private float _power;
 
     void Start()
     {
         _cam = Camera.main;
-
+        transform.LookAt(_lookAt);
         // lineRenderer.positionCount = N_TRAJECTORY_POINTS;
     }
 
